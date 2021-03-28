@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=width.device-width,initial-scale=1.0">
+    <meta http-eqiv="X-UA Compatibile" content="ie=edge">
+    <title>programik</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body onkeydown="spacja(event)">
+    <div class="conteiner">
+        <div class="box">
+            <span></span>
+            <div class="system_ruletk">
+                <div class="wyniki" id="wynik"></div>
+                <div class="czerwone wybor" >
+                    <p>czerwone</p>
+                    <button onclick="wybor(1)">+ </button>
+                    <button onclick="wybor(2)">- </button>
+                    <div id="czerwIle"> </div>
+                    <button onclick="wybor(3)">x2</button>
+                    <button onclick="wybor(4)">0 </button>
+                    
+                    <p id="lastczerw">Last bet:$ 0</p>
+
+                </div>
+                <div class="czarne wybor" >
+                    <p>czarne</p>
+                    <button onclick="wybor(5)">+ </button>
+                    <button onclick="wybor(6)">- </button>
+                    <button onclick="wybor(7)">x2</button>
+                    <button onclick="wybor(8)">0 </button>
+                    <div id="czarnIle"> </div>
+                    <p id="lastczarn">Last bet:$ 0</p>
+                </div>
+                <div class="parzyste wybor" >
+                    <p>parzyste</p>
+                    <button onclick="wybor(9)"> + </button>
+                    <button onclick="wybor(10)">- </button>
+                    <button onclick="wybor(11)">x2</button>
+                    <button onclick="wybor(12)">0 </button>
+                    <div id="parzyIle"> </div>
+                    <p id="lastparzy">Last bet:$ 0</p>
+                </div>
+                <div class="nieparzyste wybor">
+                    <p>nieparzyste</p>
+                    <button onclick="wybor(13)">+ </button>
+                    <button onclick="wybor(14)">- </button>
+                    <button onclick="wybor(15)">x2</button>
+                    <button onclick="wybor(16)">0 </button>
+                    <div id="niepaIle"> </div>
+                    <p id="lastniepa">Last bet:$ 0</p>
+                </div>
+                <div class="wysokie wybor">
+                    <p>wysokie</p>
+                    <button onclick="wybor(17)">+ </button>
+                    <button onclick="wybor(18)">- </button>
+                    <button onclick="wybor(19)">x2</button>
+                    <button onclick="wybor(20)">0 </button>
+                    <div id="wysoIle"> </div>
+                    <p id="lastwyso">Last bet:$ 0</p>
+                </div>
+                <div class="niskie wybor">
+                    <p>niskie</p>
+                    <button onclick="wybor(21)">+ </button>
+                    <button onclick="wybor(22)">- </button>
+                    <button onclick="wybor(23)">x2</button>
+                    <button onclick="wybor(24)">0 </button>
+                    <div id="niskIle"> </div>
+                    <p id="lastnisk">Last bet:$ 0</p>
+                </div>
+                <div class="kwoty">
+                    <button id="x1" onclick="mnozniki(1)">1</button>
+                    <button id="x2" onclick="mnozniki(2)">2</button>
+                    <button id="x3" onclick="mnozniki(3)">3</button>
+                    <button id="x5" onclick="mnozniki(5)">5</button>
+                    <p><br>tyle masz: $ <span id="tylemasz">100</span></p>
+                    <p><br>minimalny bet: $ <span id="minimalnybet">1</span> </p>
+                    <button id="gramy" onclick="wylosujNr()">graj </button>
+                </div>
+                <div class="suwak">
+                    <div>
+                        <input type="range" name="zaile" id="zaile" min="1" max="10" step="1" value="1"
+                        oninput="suwakZmiana('zaile')" autocomplete="off"></input>
+                    </div>
+                    <div>
+                        <input type="range" name="ile" id="ile" min="50" max="1000" step="50" value="200"
+                        oninput="suwakZmiana('ile')" autocomplete="off"></input>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+*,*:before,*:after {
+	box-sizing:border-box;
+    font-family:garmond ;
+}
+body{
+   
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    min-height: 100vh;   
+    box-sizing: border-box;
+    background: #111;
+    
+    
+}
+.conteiner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    
+}
+.box{
+    position: relative;
+    color: white;
+    background: #111;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(45deg,#a303ff,#00d0ff) ;
+}
+.box::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(45deg,#a303ff,#00d0ff) ;
+    filter:blur(30px) ;
+}
+.box+span{
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    right: 6px;
+    left: 6px;
+    background: rgb(0, 0, 0,0.2);
+    z-index: 2;
+}
+.system_ruletk{
+    
+    position: relative;
+    height: 100hv;
+    margin: 6px;
+    justify-content: center;
+    align-content: center;
+    display: grid;
+    grid-template-columns:repeat(6,50px);
+    grid-template-rows: repeat(10,70px);
+    z-index: 3;
+    
+    
+
+}
+.system_ruletk div{
+    border: 1px solid white;
+    background-color: rgb(255, 255, 255,0.1);
+    outline: none;
+    height: 100%;
+    text-align: center;
+
+    
+
+}
+.wyniki{
+    
+    grid-column:auto/span 6;
+    grid-row: auto/span 1;
+    display:grid ;
+    grid-template-columns:repeat(9,1fr);
+    grid-template-rows: 1fr 1fr;
+   
+
+}
+.wyniki span{
+
+ font-size: 1.5rem; 
+ font-family: Brush Script MT;
+
+}
+.wyniki span:first-of-type{
+    font-size: 2rem;    
+    font-weight: bold;
+}
+.red{
+    color: red;
+}
+.black{
+    color: #000;
+}
+.green{
+    color: green;
+}
+.wybor{
+    font-weight: bold;
+    font-size: 1.2rem;
+    grid-column: auto/span 3;
+    grid-row: auto/span 2;
+    justify-content: center;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+ 
+    
+    
+}
+.czerwone *,.czerwone *::after{
+    border: 1px solid red ;
+    color: red;
+    
+}
+.czarne *,.czarne *::after{
+    border: 1px solid rgb(0, 0, 0) ;
+    color: rgb(0, 0, 0);
+    
+}
+div.czerwone[title='wygrana ostatni bet']{
+    box-shadow: 0 0 20px rgba(255, 0, 0,0.4),
+                0 0 40px rgba(255, 0, 0,0.4),
+                0 0 60px rgba(255, 0, 0,0.4),
+                0 0 20px rgba(255, 0, 0,0.4) inset,
+                0 0 40px rgba(255, 0, 0,0.4) inset,
+                0 0 60px rgba(255, 0, 0,0.4) inset
+                ;
+} 
+div.czarne[title='wygrana ostatni bet']{
+    box-shadow: 0 0 20px rgba(0,0,0,0.4),
+                0 0 40px rgba(0,0,0,0.4),
+                0 0 60px rgba(0,0,0,0.4),
+                0 0 20px rgba(0,0,0,0.4) inset,
+                0 0 40px rgba(0,0,0,0.4) inset,
+                0 0 60px rgba(0,0,0,0.4) inset
+                ;
+} 
+div.parzyste[title='wygrana ostatni bet'],
+div.nieparzyste[title='wygrana ostatni bet'],
+div.wysokie[title='wygrana ostatni bet'],
+div.niskie[title='wygrana ostatni bet']{
+    box-shadow: 0 0 20px rgba(3, 196, 3, 0.4),
+                0 0 40px rgba(3, 196, 3, 0.4),
+                0 0 60px rgba(3, 196, 3, 0.4),
+                0 0 20px rgba(3, 196, 3, 0.4) inset,
+                0 0 40px rgba(3, 196, 3, 0.4) inset,
+                0 0 60px rgba(3, 196, 3, 0.4) inset
+                ;
+} 
+
+
+
+.wybor p{
+    grid-column:auto/ 4 span;
+}
+.wybor  button{
+    
+    height: fit-content;
+}
+.wybor div{
+    grid-column:2/4;
+    grid-row:2/4;
+}
+ 
+
+
+.kwoty{
+    
+    grid-column:auto/span 6;
+    grid-row:auto/span 2 ;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    
+}
+.kwoty button{
+    grid-column: auto/span 3;
+    grid-row: auto/span 1;
+}
+ 
+ .kwoty p{
+     grid-column:auto /span 8;
+     grid-row: auto /span 1;
+     
+     padding: 0;
+     margin: 0;     
+     text-align: center;
+     
+     
+     
+ }
+ #gramy{
+     grid-column:9/-1 ;
+     grid-row: 2 /-1;
+ }
+
+   
+.suwak {
+   
+    grid-column: auto/span 6;
+    grid-row: auto/span 1;
+    display: flexbox;
+}
+.suwak div{
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+button{
+    outline: none;
+    background-color: rgba(240, 240, 240, 0.2);
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 2s;
+}
+
+button:hover{
+    background-color: chartreuse;
+}
+
+
+/*wyglad suwakow wygenerowany na stronie http://danielstern.ca/range.css/#/*/
+
+
+input[type=range] {
+    width: 90%;
+    margin: 6.65px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    background: #00d0ff;
+    border: 0.5px solid #000172;
+    border-radius: 8.2px;
+    width: 100%;
+    height: 7.7px;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    margin-top: -7.15px;
+    width: 21px;
+    height: 21px;
+    background: #a303ff;
+    border: 0.6px solid #000000;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: background-color 2s;
+  }
+  input[type=range]:hover::-webkit-slider-thumb {
+    background-color: chartreuse;
+  }
+  input[type=range]::-moz-range-track {
+    background: #00d0ff;
+    border: 0.5px solid #000172;
+    border-radius: 8.2px;
+    width: 100%;
+    height: 7.7px;
+    cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 21px;
+    height: 21px;
+    background: #a303ff;
+    border: 0.6px solid #000000;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 2s;
+  }
+  input[type=range]:hover::-moz-range-thumb {
+    background-color: chartreuse;
+  }
+  input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 21.65px 0;
+    color: transparent;
+    width: 100%;
+    height: 7.7px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #c42997;
+    border: 0.5px solid #000172;
+    border-radius: 16.4px;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #d63ba9;
+    border: 0.5px solid #000172;
+    border-radius: 16.4px;
+  }
+  input[type=range]::-ms-thumb {
+    width: 21px;
+    height: 21px;
+    background: #a303ff;
+    border: 0.6px solid #000000;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #d63ba9;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #dc59b6;
+  }
+  /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+  how to remove the virtical space around the range input in IE*/
+  @supports (-ms-ime-align:auto) {
+    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+    input[type=range] {
+      margin: 0;
+      /*Edge starts the margin from the thumb, not the track as other browsers do*/
+    }
+  }
+  
